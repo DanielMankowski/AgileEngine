@@ -33,6 +33,18 @@
 		2E33D01922DC2D8D00D219A0 /* PhotoDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D01822DC2D8D00D219A0 /* PhotoDetailCoordinator.swift */; };
 		2E33D01C22DC2E5600D219A0 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D01A22DC2E5600D219A0 /* PhotoDetailViewController.swift */; };
 		2E33D01D22DC2E5600D219A0 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E33D01B22DC2E5600D219A0 /* PhotoDetailViewController.xib */; };
+		2E33D02122DD2F4F00D219A0 /* NetworkConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D02022DD2F4F00D219A0 /* NetworkConfigurator.swift */; };
+		2E33D02322DD2F6D00D219A0 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D02222DD2F6D00D219A0 /* NetworkConfig.swift */; };
+		2E33D02622DD2FD600D219A0 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D02522DD2FD600D219A0 /* HTTPHeaders.swift */; };
+		2E33D02822DD2FE600D219A0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D02722DD2FE600D219A0 /* HTTPMethod.swift */; };
+		2E33D02A22DD301100D219A0 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D02922DD301100D219A0 /* Parameters.swift */; };
+		2E33D02C22DD301B00D219A0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D02B22DD301B00D219A0 /* Endpoint.swift */; };
+		2E33D02E22DD302E00D219A0 /* NetworkCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D02D22DD302E00D219A0 /* NetworkCompletion.swift */; };
+		2E33D03122DD30B000D219A0 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03022DD30B000D219A0 /* ParameterEncoding.swift */; };
+		2E33D03322DD30C000D219A0 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03222DD30C000D219A0 /* ParameterEncoder.swift */; };
+		2E33D03522DD30CE00D219A0 /* CleanParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03422DD30CE00D219A0 /* CleanParameterEncoder.swift */; };
+		2E33D03722DD30DC00D219A0 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03622DD30DC00D219A0 /* URLParameterEncoder.swift */; };
+		2E33D03922DD30E600D219A0 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03822DD30E600D219A0 /* JSONParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +97,18 @@
 		2E33D01822DC2D8D00D219A0 /* PhotoDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCoordinator.swift; sourceTree = "<group>"; };
 		2E33D01A22DC2E5600D219A0 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		2E33D01B22DC2E5600D219A0 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
+		2E33D02022DD2F4F00D219A0 /* NetworkConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurator.swift; sourceTree = "<group>"; };
+		2E33D02222DD2F6D00D219A0 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		2E33D02522DD2FD600D219A0 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		2E33D02722DD2FE600D219A0 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2E33D02922DD301100D219A0 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
+		2E33D02B22DD301B00D219A0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2E33D02D22DD302E00D219A0 /* NetworkCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCompletion.swift; sourceTree = "<group>"; };
+		2E33D03022DD30B000D219A0 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		2E33D03222DD30C000D219A0 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		2E33D03422DD30CE00D219A0 /* CleanParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanParameterEncoder.swift; sourceTree = "<group>"; };
+		2E33D03622DD30DC00D219A0 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		2E33D03822DD30E600D219A0 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +210,7 @@
 		2E33CFEE22DBDB3C00D219A0 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				2E33D01E22DD2F0E00D219A0 /* Networking */,
 				2E33D01022DC17BA00D219A0 /* Reusable */,
 				2E33CFEF22DBDB5100D219A0 /* Coordinator */,
 			);
@@ -252,6 +277,49 @@
 				2E33D01B22DC2E5600D219A0 /* PhotoDetailViewController.xib */,
 			);
 			path = PhotoDetail;
+			sourceTree = "<group>";
+		};
+		2E33D01E22DD2F0E00D219A0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D02F22DD309900D219A0 /* Encoding */,
+				2E33D02422DD2FB700D219A0 /* Entities */,
+				2E33D01F22DD2F2000D219A0 /* Configuration */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2E33D01F22DD2F2000D219A0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D02022DD2F4F00D219A0 /* NetworkConfigurator.swift */,
+				2E33D02222DD2F6D00D219A0 /* NetworkConfig.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2E33D02422DD2FB700D219A0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D02522DD2FD600D219A0 /* HTTPHeaders.swift */,
+				2E33D02722DD2FE600D219A0 /* HTTPMethod.swift */,
+				2E33D02922DD301100D219A0 /* Parameters.swift */,
+				2E33D02B22DD301B00D219A0 /* Endpoint.swift */,
+				2E33D02D22DD302E00D219A0 /* NetworkCompletion.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2E33D02F22DD309900D219A0 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D03022DD30B000D219A0 /* ParameterEncoding.swift */,
+				2E33D03222DD30C000D219A0 /* ParameterEncoder.swift */,
+				2E33D03422DD30CE00D219A0 /* CleanParameterEncoder.swift */,
+				2E33D03622DD30DC00D219A0 /* URLParameterEncoder.swift */,
+				2E33D03822DD30E600D219A0 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,19 +460,31 @@
 			files = (
 				2E33CFFD22DBE0CF00D219A0 /* MainNavigationViewController.swift in Sources */,
 				2E33D01522DC17C900D219A0 /* NibOwnerLoadable.swift in Sources */,
+				2E33D02122DD2F4F00D219A0 /* NetworkConfigurator.swift in Sources */,
 				2E33CFF122DBDB6300D219A0 /* Coordinator.swift in Sources */,
 				2E33CFF522DBDD5300D219A0 /* Colors.swift in Sources */,
 				2E33CFED22DBDA7B00D219A0 /* AppCoordinator.swift in Sources */,
 				2E33D00822DBEBC300D219A0 /* HomeViewController.swift in Sources */,
+				2E33D02622DD2FD600D219A0 /* HTTPHeaders.swift in Sources */,
+				2E33D03722DD30DC00D219A0 /* URLParameterEncoder.swift in Sources */,
+				2E33D02A22DD301100D219A0 /* Parameters.swift in Sources */,
+				2E33D02822DD2FE600D219A0 /* HTTPMethod.swift in Sources */,
 				2E33D01C22DC2E5600D219A0 /* PhotoDetailViewController.swift in Sources */,
+				2E33D03922DD30E600D219A0 /* JSONParameterEncoder.swift in Sources */,
+				2E33D02322DD2F6D00D219A0 /* NetworkConfig.swift in Sources */,
 				2E33D01622DC17C900D219A0 /* Reusable.swift in Sources */,
+				2E33D03322DD30C000D219A0 /* ParameterEncoder.swift in Sources */,
 				2E33D00222DBE40400D219A0 /* GalleryListViewController.swift in Sources */,
 				2E33CFBC22DBD5E900D219A0 /* AppDelegate.swift in Sources */,
 				2E33D00B22DC060400D219A0 /* UISearchBar+utils.swift in Sources */,
 				2E33D00E22DC102700D219A0 /* GalleryCollectionViewCell.swift in Sources */,
 				2E33D01422DC17C900D219A0 /* NibLoadable.swift in Sources */,
+				2E33D03122DD30B000D219A0 /* ParameterEncoding.swift in Sources */,
 				2E33D00522DBE7B800D219A0 /* HomeCoordinator.swift in Sources */,
 				2E33D01922DC2D8D00D219A0 /* PhotoDetailCoordinator.swift in Sources */,
+				2E33D03522DD30CE00D219A0 /* CleanParameterEncoder.swift in Sources */,
+				2E33D02E22DD302E00D219A0 /* NetworkCompletion.swift in Sources */,
+				2E33D02C22DD301B00D219A0 /* Endpoint.swift in Sources */,
 				2E33CFF922DBDF0E00D219A0 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
