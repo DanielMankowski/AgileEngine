@@ -16,6 +16,7 @@ In order to demonstrate knowledgment I think that the most appropiate way to do 
 - Portrait and Landscape orientation
 - Photo Detail screen
 - Panning for images
+- Unit test
 
 ## Clarifications
 By time reasons in screens are missing refreshs (UIActivityIndicator) and show error messages if some error happens. By example at the moment to call API (UIAlertController).
