@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class FlickrPhoto: Codable {
+    let id: String
+    let title: String
+    let url_h: String?
+}

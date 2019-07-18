@@ -13,12 +13,12 @@ class PhotoDetailCoordinator: Coordinator {
     private let presenter: UINavigationController?
     private var viewController: PhotoDetailViewController?
     
-    init(presenter: UINavigationController) {
+    init(presenter: UINavigationController, photos: [Photo], currentPhoto: Int) {
         self.presenter = presenter
+        self.viewController = PhotoDetailViewController(photos: photos, currentImage: currentPhoto)
     }
     
     func start() {
-        viewController = PhotoDetailViewController()
         guard let viewController = viewController else { return }
         presenter?.pushViewController(viewController, animated: true)
     }

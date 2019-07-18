@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol FlickrProvider {
+    func getRecentPhotos(page: Int, completion: @escaping (_ photos: [FlickrPhoto], _ error: Error?) -> ())
+    func searchPhotos(text: String, completion: @escaping (_ photos: [FlickrPhoto], _ error: Error?) -> ())
+}

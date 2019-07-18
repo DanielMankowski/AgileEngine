@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol PhotosRepository {
+    func getRecentPhotos(page: Int, completion: @escaping ([Photo]) -> ())
+    func searchPhotos(text: String, completion: @escaping ([Photo]) -> ())
+}

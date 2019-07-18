@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class FlickrResponse: Codable {
+    var photos: FlickrPagedResponse
+    let stat: String
+}
+
+class FlickrPagedResponse: Codable {
+    let photo: [FlickrPhoto]
+    let page: Int
+    let pages: Int
+}

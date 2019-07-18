@@ -21,9 +21,7 @@
 		2E33CFFE22DBE0CF00D219A0 /* MainNavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E33CFFC22DBE0CF00D219A0 /* MainNavigationViewController.xib */; };
 		2E33D00222DBE40400D219A0 /* GalleryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D00022DBE40400D219A0 /* GalleryListViewController.swift */; };
 		2E33D00322DBE40400D219A0 /* GalleryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E33D00122DBE40400D219A0 /* GalleryListViewController.xib */; };
-		2E33D00522DBE7B800D219A0 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D00422DBE7B800D219A0 /* HomeCoordinator.swift */; };
-		2E33D00822DBEBC300D219A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D00622DBEBC300D219A0 /* HomeViewController.swift */; };
-		2E33D00922DBEBC300D219A0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E33D00722DBEBC300D219A0 /* HomeViewController.xib */; };
+		2E33D00522DBE7B800D219A0 /* GalleryListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D00422DBE7B800D219A0 /* GalleryListCoordinator.swift */; };
 		2E33D00B22DC060400D219A0 /* UISearchBar+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D00A22DC060400D219A0 /* UISearchBar+utils.swift */; };
 		2E33D00E22DC102700D219A0 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D00C22DC102700D219A0 /* GalleryCollectionViewCell.swift */; };
 		2E33D00F22DC102700D219A0 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E33D00D22DC102700D219A0 /* GalleryCollectionViewCell.xib */; };
@@ -45,6 +43,26 @@
 		2E33D03522DD30CE00D219A0 /* CleanParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03422DD30CE00D219A0 /* CleanParameterEncoder.swift */; };
 		2E33D03722DD30DC00D219A0 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03622DD30DC00D219A0 /* URLParameterEncoder.swift */; };
 		2E33D03922DD30E600D219A0 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03822DD30E600D219A0 /* JSONParameterEncoder.swift */; };
+		2E33D03E22DD334500D219A0 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03D22DD334500D219A0 /* FlickrPhoto.swift */; };
+		2E33D04022DD342E00D219A0 /* FlickrResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D03F22DD342E00D219A0 /* FlickrResponse.swift */; };
+		2E33D04322DD34D200D219A0 /* FlickrGetRecentPhotosEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D04222DD34D200D219A0 /* FlickrGetRecentPhotosEndpoint.swift */; };
+		2E33D04522DD351F00D219A0 /* FlickrBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D04422DD351F00D219A0 /* FlickrBaseEndpoint.swift */; };
+		2E33D04822DD375900D219A0 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D04722DD375900D219A0 /* Photos.swift */; };
+		2E33D04C22DD383400D219A0 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D04B22DD383400D219A0 /* PhotosRepository.swift */; };
+		2E33D05022DD388E00D219A0 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D04F22DD388E00D219A0 /* Photo.swift */; };
+		2E33D05322DD39B300D219A0 /* FlickrProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D05222DD39B300D219A0 /* FlickrProvider.swift */; };
+		2E33D05522DD39C700D219A0 /* FlickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D05422DD39C700D219A0 /* FlickrClient.swift */; };
+		2E33D05822DD3D1900D219A0 /* NetworkServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D05722DD3D1900D219A0 /* NetworkServiceProvider.swift */; };
+		2E33D05A22DD3D2C00D219A0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D05922DD3D2C00D219A0 /* NetworkService.swift */; };
+		2E33D05D22DD58AB00D219A0 /* PhotosFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D05C22DD58AB00D219A0 /* PhotosFactory.swift */; };
+		2E33D06022DD5E6600D219A0 /* GetRecentPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D05F22DD5E6600D219A0 /* GetRecentPhotos.swift */; };
+		2E33D06722E0123B00D219A0 /* Infrastructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D06622E0123B00D219A0 /* Infrastructure.swift */; };
+		2E33D06922E0145400D219A0 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D06822E0145400D219A0 /* Actions.swift */; };
+		2E33D06B22E029FE00D219A0 /* FlickrSearchPhotosEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D06A22E029FE00D219A0 /* FlickrSearchPhotosEndpoint.swift */; };
+		2E33D06D22E02CA600D219A0 /* SearchPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D06C22E02CA600D219A0 /* SearchPhotos.swift */; };
+		343BAAA93314376FF30BFEF3 /* Pods_AgileEngineChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B5FEB1DDBF95FD8536E48A /* Pods_AgileEngineChallengeUITests.framework */; };
+		57EF5BF28C8350BE7777DD4B /* Pods_AgileEngineChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4680500524A186C5F87C5E47 /* Pods_AgileEngineChallengeTests.framework */; };
+		75BE0DC15037436B810395A3 /* Pods_AgileEngineChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B608DBEFD28B2643D3FE2B /* Pods_AgileEngineChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,9 +103,7 @@
 		2E33CFFC22DBE0CF00D219A0 /* MainNavigationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainNavigationViewController.xib; sourceTree = "<group>"; };
 		2E33D00022DBE40400D219A0 /* GalleryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListViewController.swift; sourceTree = "<group>"; };
 		2E33D00122DBE40400D219A0 /* GalleryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryListViewController.xib; sourceTree = "<group>"; };
-		2E33D00422DBE7B800D219A0 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		2E33D00622DBEBC300D219A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		2E33D00722DBEBC300D219A0 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2E33D00422DBE7B800D219A0 /* GalleryListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListCoordinator.swift; sourceTree = "<group>"; };
 		2E33D00A22DC060400D219A0 /* UISearchBar+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+utils.swift"; sourceTree = "<group>"; };
 		2E33D00C22DC102700D219A0 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		2E33D00D22DC102700D219A0 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -109,6 +125,32 @@
 		2E33D03422DD30CE00D219A0 /* CleanParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanParameterEncoder.swift; sourceTree = "<group>"; };
 		2E33D03622DD30DC00D219A0 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		2E33D03822DD30E600D219A0 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		2E33D03D22DD334500D219A0 /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		2E33D03F22DD342E00D219A0 /* FlickrResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResponse.swift; sourceTree = "<group>"; };
+		2E33D04222DD34D200D219A0 /* FlickrGetRecentPhotosEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrGetRecentPhotosEndpoint.swift; sourceTree = "<group>"; };
+		2E33D04422DD351F00D219A0 /* FlickrBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrBaseEndpoint.swift; sourceTree = "<group>"; };
+		2E33D04722DD375900D219A0 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		2E33D04B22DD383400D219A0 /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
+		2E33D04F22DD388E00D219A0 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		2E33D05222DD39B300D219A0 /* FlickrProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrProvider.swift; sourceTree = "<group>"; };
+		2E33D05422DD39C700D219A0 /* FlickrClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrClient.swift; sourceTree = "<group>"; };
+		2E33D05722DD3D1900D219A0 /* NetworkServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProvider.swift; sourceTree = "<group>"; };
+		2E33D05922DD3D2C00D219A0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2E33D05C22DD58AB00D219A0 /* PhotosFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosFactory.swift; sourceTree = "<group>"; };
+		2E33D05F22DD5E6600D219A0 /* GetRecentPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecentPhotos.swift; sourceTree = "<group>"; };
+		2E33D06622E0123B00D219A0 /* Infrastructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infrastructure.swift; sourceTree = "<group>"; };
+		2E33D06822E0145400D219A0 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		2E33D06A22E029FE00D219A0 /* FlickrSearchPhotosEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrSearchPhotosEndpoint.swift; sourceTree = "<group>"; };
+		2E33D06C22E02CA600D219A0 /* SearchPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotos.swift; sourceTree = "<group>"; };
+		33B5FEB1DDBF95FD8536E48A /* Pods_AgileEngineChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgileEngineChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C0CA70DB4EB63FB6F27722 /* Pods-AgileEngineChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallengeTests/Pods-AgileEngineChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4680500524A186C5F87C5E47 /* Pods_AgileEngineChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgileEngineChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80EB81A9C3F571F8B99AD740 /* Pods-AgileEngineChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallengeUITests/Pods-AgileEngineChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		87E0EEF9BBC77AE8CD442E16 /* Pods-AgileEngineChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallenge/Pods-AgileEngineChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		96239FA68DC8A6368210BB8F /* Pods-AgileEngineChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallenge/Pods-AgileEngineChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		C97734AA5A3289154DF98A97 /* Pods-AgileEngineChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallengeTests/Pods-AgileEngineChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0B608DBEFD28B2643D3FE2B /* Pods_AgileEngineChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgileEngineChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2AC3D492238C65B8DBE153 /* Pods-AgileEngineChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallengeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallengeUITests/Pods-AgileEngineChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BE0DC15037436B810395A3 /* Pods_AgileEngineChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EF5BF28C8350BE7777DD4B /* Pods_AgileEngineChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343BAAA93314376FF30BFEF3 /* Pods_AgileEngineChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +188,8 @@
 				2E33CFCF22DBD5EB00D219A0 /* AgileEngineChallengeTests */,
 				2E33CFDA22DBD5EB00D219A0 /* AgileEngineChallengeUITests */,
 				2E33CFB922DBD5E900D219A0 /* Products */,
+				A1E3CAA1F8DC4ACF801BFD7A /* Pods */,
+				83899C7FA88426F09741B040 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +206,8 @@
 		2E33CFBA22DBD5E900D219A0 /* AgileEngineChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				2E33D04922DD380D00D219A0 /* Core */,
+				2E33D03A22DD321900D219A0 /* Infraestructure */,
 				2E33CFEE22DBDB3C00D219A0 /* Libraries */,
 				2E33CFEB22DBDA0700D219A0 /* UI */,
 				2E33CFE922DBD85E00D219A0 /* Resources */,
@@ -250,9 +299,7 @@
 			children = (
 				2E33D00022DBE40400D219A0 /* GalleryListViewController.swift */,
 				2E33D00122DBE40400D219A0 /* GalleryListViewController.xib */,
-				2E33D00422DBE7B800D219A0 /* HomeCoordinator.swift */,
-				2E33D00622DBEBC300D219A0 /* HomeViewController.swift */,
-				2E33D00722DBEBC300D219A0 /* HomeViewController.xib */,
+				2E33D00422DBE7B800D219A0 /* GalleryListCoordinator.swift */,
 				2E33D00C22DC102700D219A0 /* GalleryCollectionViewCell.swift */,
 				2E33D00D22DC102700D219A0 /* GalleryCollectionViewCell.xib */,
 			);
@@ -282,6 +329,7 @@
 		2E33D01E22DD2F0E00D219A0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				2E33D05622DD3CF600D219A0 /* Service */,
 				2E33D02F22DD309900D219A0 /* Encoding */,
 				2E33D02422DD2FB700D219A0 /* Entities */,
 				2E33D01F22DD2F2000D219A0 /* Configuration */,
@@ -322,6 +370,139 @@
 			path = Encoding;
 			sourceTree = "<group>";
 		};
+		2E33D03A22DD321900D219A0 /* Infraestructure */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D03B22DD323400D219A0 /* NetworkClient */,
+				2E33D05222DD39B300D219A0 /* FlickrProvider.swift */,
+				2E33D05422DD39C700D219A0 /* FlickrClient.swift */,
+			);
+			path = Infraestructure;
+			sourceTree = "<group>";
+		};
+		2E33D03B22DD323400D219A0 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D04622DD374700D219A0 /* Repositories */,
+				2E33D04122DD346900D219A0 /* Endpoints */,
+				2E33D03C22DD333200D219A0 /* ResponseObjects */,
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		2E33D03C22DD333200D219A0 /* ResponseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D03D22DD334500D219A0 /* FlickrPhoto.swift */,
+				2E33D03F22DD342E00D219A0 /* FlickrResponse.swift */,
+			);
+			path = ResponseObjects;
+			sourceTree = "<group>";
+		};
+		2E33D04122DD346900D219A0 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D04222DD34D200D219A0 /* FlickrGetRecentPhotosEndpoint.swift */,
+				2E33D06A22E029FE00D219A0 /* FlickrSearchPhotosEndpoint.swift */,
+				2E33D04422DD351F00D219A0 /* FlickrBaseEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		2E33D04622DD374700D219A0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D04722DD375900D219A0 /* Photos.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2E33D04922DD380D00D219A0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D06522E0122A00D219A0 /* Providers */,
+				2E33D05E22DD5E5600D219A0 /* Actions */,
+				2E33D05B22DD589B00D219A0 /* Factories */,
+				2E33D04D22DD387800D219A0 /* Entities */,
+				2E33D04A22DD381400D219A0 /* Repositories */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2E33D04A22DD381400D219A0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D04B22DD383400D219A0 /* PhotosRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2E33D04D22DD387800D219A0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D04F22DD388E00D219A0 /* Photo.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2E33D05622DD3CF600D219A0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D05722DD3D1900D219A0 /* NetworkServiceProvider.swift */,
+				2E33D05922DD3D2C00D219A0 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2E33D05B22DD589B00D219A0 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D05C22DD58AB00D219A0 /* PhotosFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		2E33D05E22DD5E5600D219A0 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D05F22DD5E6600D219A0 /* GetRecentPhotos.swift */,
+				2E33D06C22E02CA600D219A0 /* SearchPhotos.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		2E33D06522E0122A00D219A0 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				2E33D06622E0123B00D219A0 /* Infrastructure.swift */,
+				2E33D06822E0145400D219A0 /* Actions.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		83899C7FA88426F09741B040 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0B608DBEFD28B2643D3FE2B /* Pods_AgileEngineChallenge.framework */,
+				4680500524A186C5F87C5E47 /* Pods_AgileEngineChallengeTests.framework */,
+				33B5FEB1DDBF95FD8536E48A /* Pods_AgileEngineChallengeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1E3CAA1F8DC4ACF801BFD7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E0EEF9BBC77AE8CD442E16 /* Pods-AgileEngineChallenge.debug.xcconfig */,
+				96239FA68DC8A6368210BB8F /* Pods-AgileEngineChallenge.release.xcconfig */,
+				33C0CA70DB4EB63FB6F27722 /* Pods-AgileEngineChallengeTests.debug.xcconfig */,
+				C97734AA5A3289154DF98A97 /* Pods-AgileEngineChallengeTests.release.xcconfig */,
+				EF2AC3D492238C65B8DBE153 /* Pods-AgileEngineChallengeUITests.debug.xcconfig */,
+				80EB81A9C3F571F8B99AD740 /* Pods-AgileEngineChallengeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,9 +510,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E33CFE022DBD5EB00D219A0 /* Build configuration list for PBXNativeTarget "AgileEngineChallenge" */;
 			buildPhases = (
+				CE8CF4A84B072535AFAA038D /* [CP] Check Pods Manifest.lock */,
 				2E33CFB422DBD5E900D219A0 /* Sources */,
 				2E33CFB522DBD5E900D219A0 /* Frameworks */,
 				2E33CFB622DBD5E900D219A0 /* Resources */,
+				5DD8D0E6B8A85C704FAF039C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,6 +529,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E33CFE322DBD5EB00D219A0 /* Build configuration list for PBXNativeTarget "AgileEngineChallengeTests" */;
 			buildPhases = (
+				14F8747C67A2C3DE69049EBB /* [CP] Check Pods Manifest.lock */,
 				2E33CFC822DBD5EB00D219A0 /* Sources */,
 				2E33CFC922DBD5EB00D219A0 /* Frameworks */,
 				2E33CFCA22DBD5EB00D219A0 /* Resources */,
@@ -364,6 +548,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E33CFE622DBD5EB00D219A0 /* Build configuration list for PBXNativeTarget "AgileEngineChallengeUITests" */;
 			buildPhases = (
+				E3634D234C5FFC5F9C1477E6 /* [CP] Check Pods Manifest.lock */,
 				2E33CFD322DBD5EB00D219A0 /* Sources */,
 				2E33CFD422DBD5EB00D219A0 /* Frameworks */,
 				2E33CFD522DBD5EB00D219A0 /* Resources */,
@@ -433,7 +618,6 @@
 				2E33D00322DBE40400D219A0 /* GalleryListViewController.xib in Resources */,
 				2E33CFC322DBD5EB00D219A0 /* Assets.xcassets in Resources */,
 				2E33D00F22DC102700D219A0 /* GalleryCollectionViewCell.xib in Resources */,
-				2E33D00922DBEBC300D219A0 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +637,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14F8747C67A2C3DE69049EBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgileEngineChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DD8D0E6B8A85C704FAF039C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AgileEngineChallenge/Pods-AgileEngineChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgileEngineChallenge/Pods-AgileEngineChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE8CF4A84B072535AFAA038D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgileEngineChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3634D234C5FFC5F9C1477E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgileEngineChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E33CFB422DBD5E900D219A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -462,29 +737,45 @@
 				2E33D01522DC17C900D219A0 /* NibOwnerLoadable.swift in Sources */,
 				2E33D02122DD2F4F00D219A0 /* NetworkConfigurator.swift in Sources */,
 				2E33CFF122DBDB6300D219A0 /* Coordinator.swift in Sources */,
+				2E33D04322DD34D200D219A0 /* FlickrGetRecentPhotosEndpoint.swift in Sources */,
 				2E33CFF522DBDD5300D219A0 /* Colors.swift in Sources */,
+				2E33D06722E0123B00D219A0 /* Infrastructure.swift in Sources */,
 				2E33CFED22DBDA7B00D219A0 /* AppCoordinator.swift in Sources */,
-				2E33D00822DBEBC300D219A0 /* HomeViewController.swift in Sources */,
 				2E33D02622DD2FD600D219A0 /* HTTPHeaders.swift in Sources */,
 				2E33D03722DD30DC00D219A0 /* URLParameterEncoder.swift in Sources */,
+				2E33D04522DD351F00D219A0 /* FlickrBaseEndpoint.swift in Sources */,
+				2E33D06B22E029FE00D219A0 /* FlickrSearchPhotosEndpoint.swift in Sources */,
+				2E33D05D22DD58AB00D219A0 /* PhotosFactory.swift in Sources */,
+				2E33D05822DD3D1900D219A0 /* NetworkServiceProvider.swift in Sources */,
+				2E33D03E22DD334500D219A0 /* FlickrPhoto.swift in Sources */,
 				2E33D02A22DD301100D219A0 /* Parameters.swift in Sources */,
 				2E33D02822DD2FE600D219A0 /* HTTPMethod.swift in Sources */,
+				2E33D06922E0145400D219A0 /* Actions.swift in Sources */,
+				2E33D05022DD388E00D219A0 /* Photo.swift in Sources */,
 				2E33D01C22DC2E5600D219A0 /* PhotoDetailViewController.swift in Sources */,
+				2E33D05522DD39C700D219A0 /* FlickrClient.swift in Sources */,
 				2E33D03922DD30E600D219A0 /* JSONParameterEncoder.swift in Sources */,
 				2E33D02322DD2F6D00D219A0 /* NetworkConfig.swift in Sources */,
 				2E33D01622DC17C900D219A0 /* Reusable.swift in Sources */,
 				2E33D03322DD30C000D219A0 /* ParameterEncoder.swift in Sources */,
+				2E33D04022DD342E00D219A0 /* FlickrResponse.swift in Sources */,
 				2E33D00222DBE40400D219A0 /* GalleryListViewController.swift in Sources */,
 				2E33CFBC22DBD5E900D219A0 /* AppDelegate.swift in Sources */,
+				2E33D06D22E02CA600D219A0 /* SearchPhotos.swift in Sources */,
 				2E33D00B22DC060400D219A0 /* UISearchBar+utils.swift in Sources */,
 				2E33D00E22DC102700D219A0 /* GalleryCollectionViewCell.swift in Sources */,
+				2E33D05322DD39B300D219A0 /* FlickrProvider.swift in Sources */,
+				2E33D04C22DD383400D219A0 /* PhotosRepository.swift in Sources */,
 				2E33D01422DC17C900D219A0 /* NibLoadable.swift in Sources */,
 				2E33D03122DD30B000D219A0 /* ParameterEncoding.swift in Sources */,
-				2E33D00522DBE7B800D219A0 /* HomeCoordinator.swift in Sources */,
+				2E33D00522DBE7B800D219A0 /* GalleryListCoordinator.swift in Sources */,
+				2E33D04822DD375900D219A0 /* Photos.swift in Sources */,
 				2E33D01922DC2D8D00D219A0 /* PhotoDetailCoordinator.swift in Sources */,
 				2E33D03522DD30CE00D219A0 /* CleanParameterEncoder.swift in Sources */,
 				2E33D02E22DD302E00D219A0 /* NetworkCompletion.swift in Sources */,
+				2E33D06022DD5E6600D219A0 /* GetRecentPhotos.swift in Sources */,
 				2E33D02C22DD301B00D219A0 /* Endpoint.swift in Sources */,
+				2E33D05A22DD3D2C00D219A0 /* NetworkService.swift in Sources */,
 				2E33CFF922DBDF0E00D219A0 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +941,7 @@
 		};
 		2E33CFE122DBD5EB00D219A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E0EEF9BBC77AE8CD442E16 /* Pods-AgileEngineChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,6 +960,7 @@
 		};
 		2E33CFE222DBD5EB00D219A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96239FA68DC8A6368210BB8F /* Pods-AgileEngineChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -686,6 +979,7 @@
 		};
 		2E33CFE422DBD5EB00D219A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C0CA70DB4EB63FB6F27722 /* Pods-AgileEngineChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -707,6 +1001,7 @@
 		};
 		2E33CFE522DBD5EB00D219A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C97734AA5A3289154DF98A97 /* Pods-AgileEngineChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -728,6 +1023,7 @@
 		};
 		2E33CFE722DBD5EB00D219A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF2AC3D492238C65B8DBE153 /* Pods-AgileEngineChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -748,6 +1044,7 @@
 		};
 		2E33CFE822DBD5EB00D219A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80EB81A9C3F571F8B99AD740 /* Pods-AgileEngineChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

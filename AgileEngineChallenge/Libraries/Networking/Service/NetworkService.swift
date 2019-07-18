@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+public protocol NetworkService {
+    var session: URLSession { get }
+    
+    func doRequest(completion: @escaping NetworkCompletion)
+    func cancel()
+}

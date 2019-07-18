@@ -8,25 +8,37 @@
 
 import UIKit
 
+protocol GalleryListViewControllerDelegate: class {
+    func galleryListDidSelectPhoto(photos: [Photo], selectedPhoto: Int)
+}
+
 class GalleryListViewController: BaseViewController {
     
+    private var searchViewController: UISearchController = UISearchController(searchResultsController: nil)
     private var gallery: UICollectionView!
+    private var photos: [Photo] = [Photo]()
+    private var currentPage: Int = 1
+    
+    weak var delegate: GalleryListViewControllerDelegate?
     
     private struct Constants {
         static let gridValue: CGFloat = 8.0
+        static let threshold: Int = 10
+        static let searchShows = "Search Shows" //Should be localized
     }
     
     private var numberOfItems: CGFloat {
         if UIDevice.current.orientation.isPortrait {
-            return 2
-        } else { //Lanscape orientation
             return 3
+        } else { //Lanscape orientation
+            return 2
         }
     }
     
     override init() {
         super.init()
         setupGallery()
+        setupSearchBar()
         setupUI()
     }
     
@@ -36,10 +48,27 @@ class GalleryListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getRecentPhotos()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationItem.searchController?.searchBar.HideHairlineView()
     }
     
     private func setupUI() {
         view.backgroundColor = Colors.primary
+    }
+    
+    private func setupSearchBar() {
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchViewController
+        searchViewController.searchBar.backgroundColor = Colors.primary
+        searchViewController.hidesNavigationBarDuringPresentation = false
+        searchViewController.searchBar.setTextFieldColor(.white)
+        searchViewController.searchResultsUpdater = self
+        searchViewController.searchBar.placeholder = Constants.searchShows
+        searchViewController.searchBar.delegate = self
     }
     
     private func setupGallery() {
@@ -67,6 +96,25 @@ class GalleryListViewController: BaseViewController {
         layout.scrollDirection = .vertical
         return layout
     }
+    
+    private func getRecentPhotos() {
+        let getRecentPhotos = Actions.getRecentPhotos()
+        getRecentPhotos.invoke(page: currentPage) { [weak self] (result) in
+            guard let self = self else { return }
+            if case let GetRecentPhotosResult.success(photos) = result {
+                self.photos.append(contentsOf: photos)
+                self.gallery.reloadData()
+            } else {
+                //TODO: Call Alert with error
+            }
+        }
+    }
+    
+    private func checkIfNeedToLoadMorePhotos(index: Int) {
+        guard photos.count - index <= Constants.threshold else { return }
+        currentPage += 1
+        getRecentPhotos()
+    }
 }
 
 extension GalleryListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -75,12 +123,17 @@ extension GalleryListViewController: UICollectionViewDataSource, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        checkIfNeedToLoadMorePhotos(index: indexPath.row)
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.reuseIdentifier, for: indexPath) as? GalleryCollectionViewCell {
-            cell.setup()
+            let photo = photos[indexPath.row]
+            guard let imageUrl = photo.imageUrl else { return UICollectionViewCell() }
+            cell.setup(urlImage: imageUrl)
             return cell
         }
         return UICollectionViewCell()
@@ -94,5 +147,42 @@ extension GalleryListViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: Constants.gridValue, left: Constants.gridValue, bottom: 0, right: Constants.gridValue)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.galleryListDidSelectPhoto(photos: photos, selectedPhoto: indexPath.row)
+    }
+}
+
+extension GalleryListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+}
+
+extension GalleryListViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchViewController.isActive = false
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        let searchPhotos = Actions.searchPhotos()
+        guard let text = searchBar.text else { return }
+        searchPhotos.invoke(text: text) { [weak self] (result) in
+            guard let self = self else { return }
+            if case let SearchPhotosResult.success(photos) = result {
+                self.photos = photos
+                self.gallery.reloadData()
+            } else {
+                //Show alert, search need at least 3 characters
+                self.photos.removeAll()
+                self.getRecentPhotos()
+            }
+        }
     }
 }

@@ -11,13 +11,13 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     private let mainWindow: UIWindow
-    private let homeCoordinator: HomeCoordinator
+    private let homeCoordinator: GalleryListCoordinator
     private let rootViewController: UINavigationController
     
     init(withWindow window: UIWindow) {
         self.mainWindow = window
         rootViewController = MainNavigationViewController()
-        homeCoordinator = HomeCoordinator(presenter: rootViewController)
+        homeCoordinator = GalleryListCoordinator(presenter: rootViewController)
     }
     
     func start() {

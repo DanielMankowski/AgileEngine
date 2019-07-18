@@ -1,0 +1,6 @@
+framework module Pods_AgileEngineChallengeUITests {
+  umbrella header "Pods-AgileEngineChallengeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

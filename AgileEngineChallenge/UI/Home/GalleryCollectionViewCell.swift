@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SDWebImage
 
 class GalleryCollectionViewCell: UICollectionViewCell, NibReusable {
 
     @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,11 +21,14 @@ class GalleryCollectionViewCell: UICollectionViewCell, NibReusable {
     
     private func setupUI() {
         imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
     }
     
-    func setup() {
-        imageView.image = UIImage(named: "ShareThis")
+    func setup(urlImage: String) {
+        activityIndicator.startAnimating()
+        imageView.sd_setImage(with: URL(string: urlImage)) { (image, _, _, _) in
+            self.activityIndicator.stopAnimating()
+        }
     }
 
 }
