@@ -10,4 +10,5 @@ import UIKit
 
 class Colors {
     static let primary: UIColor = .black
+    static let accent: UIColor = .green
 }

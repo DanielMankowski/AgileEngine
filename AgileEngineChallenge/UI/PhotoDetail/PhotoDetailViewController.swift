@@ -12,6 +12,9 @@ class PhotoDetailViewController: BaseViewController {
     
     private var imageView: UIImageView!
     private var activityIndicator: UIActivityIndicatorView!
+    private var cameraLabel: UILabel!
+    private var titleLabel: UILabel!
+    private var floatButton: UIImageView!
     public var photos: [Photo]?
     public var currentImage: Int = 0
     
@@ -43,8 +46,8 @@ class PhotoDetailViewController: BaseViewController {
         setupImageView()
         setupLoading()
         setupFloatButton()
-        setupTitleLabel()
         setupCameraLabel()
+        setupTitleLabel()
         setupSwipe()
         updateImage()
     }
@@ -73,15 +76,44 @@ class PhotoDetailViewController: BaseViewController {
     }
     
     private func setupFloatButton() {
+        floatButton = UIImageView()
+        floatButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(floatButton)
+        floatButton.layer.cornerRadius = 0.5 * floatButton.bounds.size.width
         
+        floatButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60).isActive = true
+        floatButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        floatButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        floatButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        floatButton.isUserInteractionEnabled = true
+        floatButton.image = UIImage(named: "ShareThis")
+        floatButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.didShareButtonPressed)))
     }
     
     private func setupTitleLabel() {
-        
+        titleLabel = UILabel()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        view.addSubview(titleLabel)
+        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: cameraLabel.topAnchor, constant: -16).isActive = true
+        titleLabel.trailingAnchor.constraint(greaterThanOrEqualTo: floatButton.leadingAnchor, constant: 8).isActive = true
+
+        titleLabel.text = photos?[currentImage].title ?? "Title"
     }
     
     private func setupCameraLabel() {
-    
+        cameraLabel = UILabel()
+        cameraLabel.translatesAutoresizingMaskIntoConstraints = false
+        cameraLabel.textColor = .white
+        view.addSubview(cameraLabel)
+        
+        cameraLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
+        cameraLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60).isActive = true
+        
+        cameraLabel.text = photos?[currentImage].camera ?? "Camera"
     }
     
     private func setupSwipe() {
@@ -92,6 +124,12 @@ class PhotoDetailViewController: BaseViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipeGesture))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc private func didShareButtonPressed() {
+        guard let url = photos?[currentImage].imageUrl else { return }
+        let shareViewController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        present(shareViewController, animated: true)
     }
     
     @objc private func didSwipeGesture(gesture: UIGestureRecognizer) {

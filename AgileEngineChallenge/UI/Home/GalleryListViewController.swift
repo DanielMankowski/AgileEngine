@@ -29,9 +29,9 @@ class GalleryListViewController: BaseViewController {
     
     private var numberOfItems: CGFloat {
         if UIDevice.current.orientation.isPortrait {
-            return 3
-        } else { //Lanscape orientation
             return 2
+        } else { //Lanscape orientation
+            return 3
         }
     }
     

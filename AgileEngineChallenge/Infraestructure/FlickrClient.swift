@@ -9,6 +9,7 @@
 import Foundation
 
 class FlickrClient: FlickrProvider {
+    //I could implement a cache for offline request
     private var pages: Int = 99999
     func getRecentPhotos(page: Int, completion: @escaping ([FlickrPhoto], Error?) -> ()) {
         guard page <= pages else {
