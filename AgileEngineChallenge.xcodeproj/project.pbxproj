@@ -62,6 +62,9 @@
 		2E33D06D22E02CA600D219A0 /* SearchPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33D06C22E02CA600D219A0 /* SearchPhotos.swift */; };
 		343BAAA93314376FF30BFEF3 /* Pods_AgileEngineChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B5FEB1DDBF95FD8536E48A /* Pods_AgileEngineChallengeUITests.framework */; };
 		57EF5BF28C8350BE7777DD4B /* Pods_AgileEngineChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4680500524A186C5F87C5E47 /* Pods_AgileEngineChallengeTests.framework */; };
+		65C0F7CF22E0AE9A00560BBC /* PhotosMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0F7CE22E0AE9A00560BBC /* PhotosMother.swift */; };
+		65C0F7D222E0B19800560BBC /* PhotosMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0F7D122E0B19800560BBC /* PhotosMock.swift */; };
+		65C0F7D422E0B34F00560BBC /* SearchTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C0F7D322E0B34F00560BBC /* SearchTest.swift */; };
 		75BE0DC15037436B810395A3 /* Pods_AgileEngineChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B608DBEFD28B2643D3FE2B /* Pods_AgileEngineChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +148,9 @@
 		33B5FEB1DDBF95FD8536E48A /* Pods_AgileEngineChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgileEngineChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C0CA70DB4EB63FB6F27722 /* Pods-AgileEngineChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallengeTests/Pods-AgileEngineChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4680500524A186C5F87C5E47 /* Pods_AgileEngineChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgileEngineChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C0F7CE22E0AE9A00560BBC /* PhotosMother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMother.swift; sourceTree = "<group>"; };
+		65C0F7D122E0B19800560BBC /* PhotosMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosMock.swift; sourceTree = "<group>"; };
+		65C0F7D322E0B34F00560BBC /* SearchTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTest.swift; sourceTree = "<group>"; };
 		80EB81A9C3F571F8B99AD740 /* Pods-AgileEngineChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallengeUITests/Pods-AgileEngineChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		87E0EEF9BBC77AE8CD442E16 /* Pods-AgileEngineChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallenge/Pods-AgileEngineChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		96239FA68DC8A6368210BB8F /* Pods-AgileEngineChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngineChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngineChallenge/Pods-AgileEngineChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,8 +224,11 @@
 		2E33CFCF22DBD5EB00D219A0 /* AgileEngineChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				65C0F7CD22E0AE7F00560BBC /* Mocks */,
+				65C0F7CC22E0AE7000560BBC /* Mothers */,
 				2E33CFD022DBD5EB00D219A0 /* AgileEngineChallengeTests.swift */,
 				2E33CFD222DBD5EB00D219A0 /* Info.plist */,
+				65C0F7D322E0B34F00560BBC /* SearchTest.swift */,
 			);
 			path = AgileEngineChallengeTests;
 			sourceTree = "<group>";
@@ -478,6 +487,22 @@
 				2E33D06822E0145400D219A0 /* Actions.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		65C0F7CC22E0AE7000560BBC /* Mothers */ = {
+			isa = PBXGroup;
+			children = (
+				65C0F7CE22E0AE9A00560BBC /* PhotosMother.swift */,
+			);
+			path = Mothers;
+			sourceTree = "<group>";
+		};
+		65C0F7CD22E0AE7F00560BBC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				65C0F7D122E0B19800560BBC /* PhotosMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		83899C7FA88426F09741B040 /* Frameworks */ = {
@@ -785,6 +810,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E33CFD122DBD5EB00D219A0 /* AgileEngineChallengeTests.swift in Sources */,
+				65C0F7D422E0B34F00560BBC /* SearchTest.swift in Sources */,
+				65C0F7D222E0B19800560BBC /* PhotosMock.swift in Sources */,
+				65C0F7CF22E0AE9A00560BBC /* PhotosMother.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
